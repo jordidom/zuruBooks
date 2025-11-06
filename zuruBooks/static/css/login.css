@@ -1,0 +1,103 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #121212;
+    color: #ffffff;
+}
+
+header {
+    background: linear-gradient(90deg, #ff416c, #ff4b2b);
+    padding: 20px;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 80px);
+}
+
+.login-form {
+    background: #1e1e1e;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    width: 300px;
+    text-align: center;
+}
+
+.login-form h2 {
+    margin-bottom: 20px;
+    color: #ff416c;
+}
+
+.input-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.input-group label {
+    font-size: 14px;
+    color: #ccc;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    background-color: #2a2a2a;
+    color: #fff;
+    outline: none;
+    font-size: 14px;
+}
+
+.input-group input:focus {
+    border: 2px solid #ff416c;
+}
+
+button {
+    background: linear-gradient(90deg, #ff416c, #ff4b2b);
+    border: none;
+    padding: 10px 20px;
+    color: white;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: opacity 0.3s;
+    width: 100%;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+.register-text {
+    margin-top: 15px;
+    font-size: 14px;
+    color: #ccc;
+}
+
+.register-text a {
+    color: #ff416c;
+    text-decoration: none;
+}
+
+.register-text a:hover {
+    color: #ff4b2b;
+}
+
+.error-msg {
+    color: #ff4b2b;
+    font-size: 14px;
+    margin-bottom: 10px;
+    height: 16px; /* para que no mueva el diseño */
+}

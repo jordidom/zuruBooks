@@ -1,0 +1,100 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #121212;
+    color: #ffffff;
+}
+
+/* HEADER */
+header {
+    background: linear-gradient(90deg, #ff416c, #ff4b2b);
+    padding: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    text-align: center;
+}
+
+/* CONTENEDOR PRINCIPAL DEL LIBRO */
+.book-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 40px 80px; /* antes era 20px — más margen a los lados */
+    justify-content: center;
+    align-items: flex-start;
+}
+
+/* VISOR DEL PDF */
+.book-viewer {
+    flex: 1 1 650px; /* ancho algo más controlado */
+    min-width: 300px;
+    margin: 0 auto; /* centrado horizontal */
+}
+
+.pdf-frame {
+    width: 100%;
+    height: 150vh; /* tamaño más compacto */
+    border-radius: 10px;
+    border: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* COLUMNA DERECHA: BOTONES */
+.book-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    min-width: 200px;
+    margin-top: 20px;
+}
+
+/* BOTONES – mismo estilo que en cartelera.html */
+.btn-download,
+.btn-back,
+.btn-fullscreen {
+    display: inline-block;
+    text-decoration: none;
+    text-align: center;
+    font-weight: 600;
+    font-size: 14px;
+    padding: 10px 22px;
+    border-radius: 25px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Descargar y Pantalla completa con degradado */
+.btn-download,
+.btn-fullscreen {
+    background: linear-gradient(135deg, #ff005d, #ff8a00);
+    color: #fff;
+    box-shadow: 0 4px 8px rgba(255, 0, 90, 0.3);
+}
+
+.btn-download:hover,
+.btn-fullscreen:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(255, 0, 90, 0.5);
+    filter: brightness(1.1);
+}
+
+/* Botón volver con estilo oscuro a juego */
+.btn-back {
+    background: #222;
+    color: #fff;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.4);
+}
+
+.btn-back:hover {
+    background: #444;
+    transform: translateY(-2px);
+}
+
+/* Evitar que todos los <a> del documento hereden estilos viejos */
+a {
+    color: inherit;
+}

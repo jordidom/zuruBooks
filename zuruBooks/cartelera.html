@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZuruBooks</title>
+    <link rel="stylesheet" href="static/css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>ZuruBooks</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><button onclick="mostrarTodo()">Inicio</button></li>
+            <li>
+                <!-- Menú de selección de género -->
+                <select id="filtroGenero" onchange="filtrarPorGenero(this.value)">
+                    <option value="todos">Todos los géneros</option>
+                    <option value="romance">Romance</option>
+                    <option value="fantasia">Fantasía</option>
+                    <option value="fantasia-gotica">Fantasía Gótica</option>
+                    <option value="terror">Terror</option>
+                    <option value="ciencia-ficcion">Ciencia Ficción</option>
+                    <option value="misterio">Misterio</option>
+                    <option value="drama">Drama</option>
+                </select>
+            </li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="gallery" id="gallery">
+            <!-- Los libros se cargarán aquí dinámicamente -->
+        </section>
+    </main>
+
+    <script defer src="static/js/script.js"></script>
+</body>
+</html>
