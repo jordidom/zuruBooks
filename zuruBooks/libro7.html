@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El día que se perdió el amor</title>
+    <link rel="stylesheet" href="static/css/peliculas.css">
+</head>
+<body>
+    <header>
+        <h1>El día que se perdió el amor</h1>
+    </header>
+
+    <div class="book-container">
+        <!-- Lado izquierdo: visor del PDF -->
+        <div class="book-viewer">
+            <!-- Aquí se lee el libro dentro de la página -->
+            <iframe 
+                src="static/pdf/El día que se perdió el amor - Javier Castillo.pdf" 
+                class="pdf-frame" 
+                frameborder="0"
+                allowfullscreen
+                allow="fullscreen">
+            </iframe>
+        </div>
+
+        <!-- Lado derecho: botones -->
+        <div class="book-actions">
+            <a href="static/pdf/El día que se perdió el amor - Javier Castillo.pdf" download class="btn-download">
+                Descargar PDF
+            </a>
+            <button class="btn-fullscreen" onclick="openFullscreen()">
+                Pantalla completa
+            </button>
+            <a href="cartelera.html" class="btn-back">
+                Volver al inicio
+            </a>
+        </div>
+    </div>
+
+    <script>
+        function openFullscreen() {
+            const viewer = document.querySelector('.book-viewer');
+            if (viewer.requestFullscreen) {
+                viewer.requestFullscreen();
+            } else if (viewer.webkitRequestFullscreen) { // Safari
+                viewer.webkitRequestFullscreen();
+            } else if (viewer.msRequestFullscreen) { // IE/Edge antiguos
+                viewer.msRequestFullscreen();
+            }
+        }
+    </script>
+</body>
+</html>
